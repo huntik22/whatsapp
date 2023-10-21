@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/colors.dart';
+import 'package:whatsapp/widgets/colors.dart';
 
 import 'widgets/favoritesection.dart';
 import 'widgets/menusection.dart';
@@ -30,7 +30,7 @@ class page1 extends StatelessWidget {
         children: [
           MenuSection(),
           FavoriteSection(),
-          MessageSection()
+          Expanded(child: MessageSection(),) 
         ],
 
       ),
