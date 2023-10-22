@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/page1.dart';
 
+import 'widgets/bottomSection.dart';
+import 'widgets/chatSection.dart';
 import 'widgets/colors.dart';
 
 class page2 extends StatelessWidget {
@@ -25,6 +27,11 @@ class page2 extends StatelessWidget {
               icon: Icon(Icons.menu))
         ],
       ),
+      body: ChatSection(),
+      
+      bottomNavigationBar:BottomSection() ,
     );
   }
 }
+
+
