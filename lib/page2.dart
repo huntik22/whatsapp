@@ -11,6 +11,7 @@ class page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: noir,
         leading: IconButton(onPressed: () {
@@ -27,7 +28,7 @@ class page2 extends StatelessWidget {
               icon: Icon(Icons.menu))
         ],
       ),
-      body: ChatSection(),
+      body:const ChatingSection(),
       
       bottomNavigationBar:BottomSection() ,
     );

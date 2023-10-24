@@ -8,18 +8,14 @@ class BottomSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      padding: const EdgeInsets.all(10),
-      elevation: 200,
-      color: Colors.white,
-      
+      color: Colors.white, 
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         child: Row(
           children: [
             Expanded(
               child: Container(
-              // padding: const EdgeInsets.all(20),
-              height: 43,
+              height: 45,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
                 color: vert,
@@ -35,22 +31,39 @@ class BottomSection extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border:InputBorder.none,
-                        labelText: 'Message' ),
-                      cursorColor: Colors.white,
+                        hintText: "Message"
+                      ),
+                      cursorColor: Colors.black,
                       
                     )
                   ),
                   IconButton(onPressed: (){}, icon: const Icon(Icons.upload_outlined,color: Colors.white,size: 30,)),
-                  const SizedBox(width: 10,),
+                  const SizedBox(width: 5,),
                   IconButton(onPressed: (){}, icon: const Icon(Icons.image,color: Colors.white,size: 30,)),
-                  SizedBox(width: 10,)
-
-                  // Container()
-                ],     
+                  const SizedBox(width: 10,),              
+                  ],     
+                ),
               ),
             ),
-          )
-            
+         
+            Container(
+              margin: EdgeInsets.only(left: 10),
+              height: 45,
+              width: 50,
+              // padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: vert,
+              ),
+              child: Center(
+                child: IconButton(
+                    onPressed: (){},
+                    icon:const Icon(
+                      Icons.mic_none_sharp,
+                      color: Colors.white,)
+                  ),
+              ),
+            )           
           ],
         ),
       ),
